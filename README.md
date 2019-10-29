@@ -4,15 +4,16 @@ In order to run the app and train the Neural Network, you can download the datas
 https://drive.google.com/open?id=15nKAmnpCJvVFfVaPE_lVJ69paJH9D4XN
 And put it inside the ConvolutionalNeuralNetworks folder.
 Run the training of the network with:
-  python3 cnn.py
+  ```python3 cnn.py```
 And then run the app with:
-  python3 app.py
+  ```pip3 install -r requirements.txt```
+  ```python3 app.py```
 
 If you would like to run the app using our pretrained network, you can download
 the model file from:
 https://drive.google.com/open?id=1QsRhEOyVdDNPvNJsYaw4J7gvFu7oCexo
 And put it inside the ServeModel/models folder. And then run the app:
-  python3 app.py
+  ```python3 app.py```
 
 
 Full code with trained model and data set can be found at:
