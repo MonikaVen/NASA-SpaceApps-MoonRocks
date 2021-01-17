@@ -15,6 +15,7 @@ from keras.preprocessing import image
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
 from gevent.pywsgi import WSGIServer
+import tensorflow as tf
 
 # Define a flask app
 app = Flask(__name__)
@@ -23,8 +24,10 @@ app = Flask(__name__)
 MODEL_PATH = 'models/model'
 
 # # Load your trained model
-model = load_model(MODEL_PATH)
-model._make_predict_function()          # Necessary
+#model = load_model(MODEL_PATH)
+model = tf.keras.models.load_model(MODEL_PATH)
+#model._make_predict_function()          # Necessary
+
 print('Model loaded. Start serving...')
 
 # You can also use pretrained model from Keras
@@ -44,8 +47,8 @@ def model_predict(img_path, model):
     # Be careful how your trained model deals with the input
     # otherwise, it won't make correct prediction!
     # x = preprocess_input(x, mode='caffe')
-
-    preds = model.predict(x)
+    preds = model.predict_generator(x)
+    # preds = model.predict(x)
     return preds
 
 
