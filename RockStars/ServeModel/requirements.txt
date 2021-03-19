@@ -3,7 +3,7 @@ Flask==1.1.2
 numpy==1.19.5
 Keras==2.4.3
 gevent==21.1.0
-pillow==7.1.0
+pillow==8.1.1
 h5py==2.10.0
 tensorflow==2.4.0
 gunicorn==19.9.0
