@@ -1,6 +1,6 @@
 Werkzeug==1.0.1
 Flask==1.1.2
-numpy==1.19.5
+numpy==1.22.0
 Keras==2.4.3
 gevent==21.1.0
 pillow==7.1.0
